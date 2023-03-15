@@ -1,6 +1,5 @@
-<mat-list *ngFor="let product of products">
-  <mat-list-item>
-    <div>{{ product.title }}</div>
-    <div>{{ product.description }}</div>
-  </mat-list-item>
-</mat-list>
+<div class="grid md:grid-cols-3 gap-2">
+  <div class="flex flex-col" *ngFor="let product of products">
+    <myorg-product-card [product]="product" />
+  </div>
+</div>

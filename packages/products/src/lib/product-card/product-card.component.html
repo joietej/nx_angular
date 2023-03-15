@@ -1,0 +1,20 @@
+<mat-card class="h-[640px] w-full">
+  <mat-card-header>
+    <mat-card-title class="mt-4">
+      <span>{{ product?.title }}</span>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <span >Price : {{ product?.price }}</span>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="mt-4">
+    <img mat-card-image class="object-cover"
+         *ngIf="product?.images?.length"
+         [src]="product!.images[0]"
+         [alt]="product!.title"
+    />
+  </mat-card-content>
+  <mat-card-footer class="mt-4">
+    <p class="p-4 text-sm text-ellipsis">{{ product?.description }}</p>
+  </mat-card-footer>
+</mat-card>
